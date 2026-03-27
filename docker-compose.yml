@@ -1,20 +1,47 @@
-version: '3.8'
 
 services:
+
+  # Apache + PHP (replaces XAMPP's Apache & PHP)
   web:
-    build: .
+    build:
+      context: .
+      dockerfile: Dockerfile
     ports:
-      - "8080:80"
+      - "8080:80"       # visit localhost:8080
     volumes:
-      - .:/var/www/html
+      - ./:/var/www/html  
+    user: "www-data"       
     depends_on:
       - db
+    environment:
+      - DB_HOST=db
+      - DB_PORT=3306
+      - DB_NAME=${DB_NAME}
+      - DB_USER=${DB_USER}
+      - DB_PASS=${DB_PASS}
 
+  # MySQL (replaces XAMPP's MySQL)
   db:
     image: mysql:8.0
     restart: always
     environment:
+      MYSQL_DATABASE: testshopdb
       MYSQL_ROOT_PASSWORD: root
-      MYSQL_DATABASE: mydb
+      MYSQL_ROOT_HOST: '%'
     ports:
-      - "3307:3306"
+      - "3306:3306"
+    volumes:
+      - db_data:/var/lib/mysql       # persists your database
+
+  # phpMyAdmin (replaces XAMPP's phpMyAdmin)
+  phpmyadmin:
+    image: phpmyadmin:latest
+    ports:
+      - "8081:80"                    # visit localhost:8081
+    environment:
+      PMA_HOST: db
+      PMA_USER: ${DB_USER}
+      PMA_PASSWORD: ${DB_PASS}
+
+volumes:
+  db_data:
