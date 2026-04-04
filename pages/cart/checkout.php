@@ -1,10 +1,10 @@
 <?php
 session_start();
-include "db.php";
+include "../../includes/db.php";
 
 if(!isset($_SESSION['user_id']))
     {
-        header("location: login.logic.php");
+        header("location: /Majesty_project/logic/login.logic.php");
         exit();
     }
 
@@ -20,12 +20,12 @@ if(!isset($_SESSION['user_id']))
 function orderSuccess() 
     {
         alert("Order placed successfully! \n\nPress OK to go to the main site.");
-        fetch('reset_cart.php')
+        fetch('../../logic/reset_cart.logic.php')
         .then(() => {
-            window.location.href = "home.html";
+            window.location.href = "/Majesty_project/pages/home/home.html";
         })
         .catch(() => {
-            window.location.href = "home.html"; 
+            window.location.href = "/Majesty_project/pages/home/home.html"; 
         });
         return false;
     }
@@ -38,13 +38,13 @@ function orderSuccess()
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Majesty | Checkout</title>
 
-    <link rel="stylesheet" href="checkout.css">
+    <link rel="stylesheet" href="/Majesty_project/pages/cart/checkout.css">
 </head>
 <body>
 
     <!--navigation bar-->
     <header class="navbar">
-        <a href="home.html"><img src="img/majesty(1).png" alt="logo" width="120" height="40"></a>
+        <a href="/Majesty_project/pages/home/home.html"><img src="/Majesty_project/assets/images/majesty(1).png" alt="logo" width="120" height="40"></a>
     </header>
 
 <main class="checkout-container">
@@ -68,7 +68,7 @@ function orderSuccess()
             <input type="address" name="address" value="<?= $user['address']; ?>" readonly>
 
             <label>Mobile</label>
-            <input type="text" name="mobile" value="<?= $user['mobile']; ?>" required>
+            <input type="text" name="mobile" value="<?= $user['mobile']; ?>" pattern="^[0-9]{10}$" required>
 
             
         </form>
@@ -85,7 +85,7 @@ function orderSuccess()
             <input type="text" placeholder="John Doe" required>
 
             <label>Card Number</label>
-            <input type="text" placeholder="1234 5678 9012 3456" required>
+            <input type="text" placeholder="1234 5678 9012 3456" pattern="^\d{16}$" required>
 
             <div class="card-row">
                 <div class="card-field">
@@ -118,15 +118,15 @@ function orderSuccess()
             </p>
 
             <!--social media links-->
-            <img src="img/insta.png" alt="instergram" height="30px" width="30px">
-            <img src="img/fb.png" alt="facebook" height="30px" width="30px">
-            <img src="img/x.png" alt="x" height="30px" width="30px">
+            <img src="/Majesty_project/assets/images/insta.png" alt="instergram" height="30px" width="30px">
+            <img src="/Majesty_project/assets/images/fb.png" alt="facebook" height="30px" width="30px">
+            <img src="/Majesty_project/assets/images/x.png" alt="x" height="30px" width="30px">
         </div>
 
         <div class="footer-column">
             <ul>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="refund_policy.html">Refund Policy</a></li>
+                <li><a href="/Majesty_project/pages/general/contact.html">Contact</a></li>
+                <li><a href="/Majesty_project/pages/general/refund_policy.html">Refund Policy</a></li>
             </ul>
             <br>
             <pre>&copy; 2026 | Majesty | All Rights Reserved |</pre>

@@ -126,7 +126,7 @@ body {
 }
 
 .cart:hover {
-    content: url(img/add.png);
+    content: url(/Majesty_project/assets/images/add.png);
 }
 
 .nav-links li a:hover {

@@ -1,1 +1,4 @@
-DirectoryIndex home.html
+RewriteEngine On
+RewriteBase /Majesty_project/
+
+DirectoryIndex pages/home/home.html

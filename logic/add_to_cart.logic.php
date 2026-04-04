@@ -29,11 +29,11 @@ else
 <script>
     if(confirm("Item added to cart ! \n\nView cart ?"))
         {
-            window.location.href = "cart.logic.php";
+            window.location.href = "/Majesty_project/pages/cart/cart.php";
         }
 
     else
         {
-            window.location.href = "home.php"   
+            window.location.href = "/Majesty_project/pages/home/home.php"   
         }
 </script>

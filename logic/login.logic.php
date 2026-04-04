@@ -1,5 +1,5 @@
 <?php
-    include "db.php";
+    include "../includes/db.php";
 
     session_start();
 
@@ -22,12 +22,12 @@
                          
                         if($_SESSION['user_role'] == "admin")
                             {
-                                header("Location:dashboard.php");
+                                header("Location:/Majesty_project/pages/cart/dashboard.php");
                             }
 
                         else 
                             {
-                                header("Location:checkout.php");
+                                header("Location:/Majesty_project/pages/cart/checkout.php");
                             }
                     }
                 

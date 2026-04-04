@@ -1,5 +1,5 @@
 <?php
-include "db.php";
+include "../includes/db.php";
 if(isset($_POST['submit']))
     {
         $name = $_POST['name'];
@@ -19,7 +19,7 @@ if(isset($_POST['submit']))
                 echo 
                     "<script>
                         alert('This email is already registered ! \\n\\nYou will be redirected to login page !');
-                        window.location.href='login.html';
+                        window.location.href='/Majesty_project/pages/auth/login.html';
                     </script>";
                 exit();
             }
@@ -42,7 +42,7 @@ if(isset($_POST['submit']))
                 echo 
                     "<script>
                         alert('Registered Successfully');
-                        window.location.href='home.html';
+                        window.location.href='/Majesty_project/pages/home/home.html';
                     </script>" ; 
             }
 

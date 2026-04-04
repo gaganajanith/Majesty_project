@@ -5,7 +5,7 @@ services:
   web:
     build:
       context: .
-      dockerfile: Dockerfile
+      dockerfile: docker/Dockerfile
     ports:
       - "8080:80"       # visit localhost:8080
     volumes:
@@ -31,7 +31,8 @@ services:
     ports:
       - "3306:3306"
     volumes:
-      - db_data:/var/lib/mysql       # persists your database
+      - db_data:/var/lib/mysql  
+      - ./database/testshopdb.sql:/docker-entrypoint-initdb.d/testshopdb.sql     # persists your database
 
   # phpMyAdmin (replaces XAMPP's phpMyAdmin)
   phpmyadmin:

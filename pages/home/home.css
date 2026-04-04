@@ -126,7 +126,7 @@ body {
 }
 
 .cart:hover {
-    content: url(img/add.png);
+    content: url(/Majesty_project/assets/images/add.png);
 }
 
 .nav-links li a:hover {
@@ -139,7 +139,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: url('img/shop_image.jpeg') no-repeat center center/cover;
+    background: url('/Majesty_project/assets/images/shop_image.jpeg') no-repeat center center/cover;
     position: relative;
 }
 
@@ -193,7 +193,7 @@ body {
 
 /*signin text*/
 .sign-up-text {
-    background-image: url(img/sign-inback.jpeg);
+    background-image: url(/Majesty_project/assets/images/sign-inback.jpeg);
 
     background-size: cover;
     background-position: center;
