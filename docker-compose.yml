@@ -9,8 +9,7 @@ services:
     ports:
       - "8080:80"       # visit localhost:8080
     volumes:
-      - ./:/var/www/html  
-    user: "www-data"       
+      - ./:/var/www/html/Majesty_project       
     depends_on:
       - db
     environment:
@@ -30,7 +29,7 @@ services:
       MYSQL_ROOT_PASSWORD: root
       MYSQL_ROOT_HOST: '%'
     ports:
-      - "3306:3306"
+      - "3307:3306"
     volumes:
       - db_data:/var/lib/mysql  
       - ./database/testshopdb.sql:/docker-entrypoint-initdb.d/testshopdb.sql     # persists your database

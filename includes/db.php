@@ -2,12 +2,12 @@
 
 //check whether we are running inside a docker container
 
-$host = (getenv('DOCKER_ENV'))?'db':'localhost';
-$user =  'root';
-$pass = (getenv('DOCKER_ENV'))?'root':'';
-$dbname = 'testshopdb';
+$host   = getenv('DB_HOST') ?: 'localhost';
+$user   = getenv('DB_USER') ?: 'root';
+$pass   = getenv('DB_PASS') ?: '';
+$db     = getenv('DB_NAME') ?: 'testshopdb';
 
-$conn = mysqli_connect($host,$user,$pass,$dbname);
+$conn = mysqli_connect($host,$user,$pass,$db);
 
 if(!$conn)
     {
