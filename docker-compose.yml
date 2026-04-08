@@ -19,6 +19,7 @@ services:
       - DB_NAME=${DB_NAME}
       - DB_USER=${DB_USER}
       - DB_PASS=${DB_PASS}
+      - DOCKER_ENV=true
 
   # MySQL (replaces XAMPP's MySQL)
   db:
