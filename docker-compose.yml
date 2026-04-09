@@ -1,7 +1,7 @@
 
 services:
 
-  # replaces XAMPP's Apache & PHP
+  # replaces XAMPP Apache & PHP
   web:
     build:
       context: .

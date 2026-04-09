@@ -22,7 +22,7 @@
                          
                         if($_SESSION['user_role'] == "admin")
                             {
-                                header("Location:/Majesty_project/pages/cart/dashboard.php");
+                                header("Location:/Majesty_project/pages/cart/checkout.php");
                             }
 
                         else 
