@@ -1,13 +1,13 @@
 
 services:
 
-  # Apache + PHP (replaces XAMPP's Apache & PHP)
+  # replaces XAMPP's Apache & PHP
   web:
     build:
       context: .
       dockerfile: docker/Dockerfile
     ports:
-      - "8080:80"       # visit localhost:8080
+      - "8080:80"       
     volumes:
       - ./:/var/www/html/Majesty_project       
     depends_on:
@@ -20,7 +20,7 @@ services:
       - DB_PASS=${DB_PASS}
       - DOCKER_ENV=true
 
-  # MySQL (replaces XAMPP's MySQL)
+  # replaces XAMPP MySQL
   db:
     image: mysql:8.0
     restart: always
@@ -32,13 +32,13 @@ services:
       - "3307:3306"
     volumes:
       - db_data:/var/lib/mysql  
-      - ./database/testshopdb.sql:/docker-entrypoint-initdb.d/testshopdb.sql     # persists your database
+      - ./database/testshopdb.sql:/docker-entrypoint-initdb.d/testshopdb.sql    
 
-  # phpMyAdmin (replaces XAMPP's phpMyAdmin)
+  # replaces XAMPP phpMyAdmin
   phpmyadmin:
     image: phpmyadmin:latest
     ports:
-      - "8081:80"                    # visit localhost:8081
+      - "8081:80"                  
     environment:
       PMA_HOST: db
       PMA_USER: ${DB_USER}

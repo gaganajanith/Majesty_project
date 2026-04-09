@@ -2,7 +2,7 @@ FROM php:8.2-apache
 
 RUN a2enmod rewrite
 
-# Set DocumentRoot to project folder
+# Set document root to project folder
 RUN sed -i 's|/var/www/html|/var/www/html/Majesty_project|g' /etc/apache2/sites-available/000-default.conf
 
 # makes /Majesty_project/ paths work even though we are inside that folder
