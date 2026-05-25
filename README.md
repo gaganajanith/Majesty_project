@@ -39,7 +39,7 @@ This project demonstrates a full-stack web application with both frontend and ba
 1. Ensure Docker desktop is installed.  
 2. Clone the repository:  
     ```bash
-    git clone https://github.com/gaganajanith585-ship-it/Majesty_project.git
+    git clone https://github.com/gaganajanith/Majesty_project.git
     cd Majesty_project
     ```
 
