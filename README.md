@@ -124,7 +124,14 @@ This project demonstrates a full-stack web application with both frontend and ba
 - **v1.1** – Introduced Docker support for easier setup 
 - **v2.0** – File system restructured for better organization
 
+## License
+
+This project is licensed under the MIT License.  
+See the [LICENSE](./LICENSE) file for details.
+
+---
+
 ## Credits & Attribution
 
-See full details of third-party resources and team contributions here:  
+All team members, third-party assets, and external resources used in this project are documented in:  
 [ATTRIBUTION.md](./ATTRIBUTION.md)
