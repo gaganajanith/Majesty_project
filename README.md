@@ -123,3 +123,8 @@ This project demonstrates a full-stack web application with both frontend and ba
 - **v1.0** – First release running on local XAMPP  
 - **v1.1** – Introduced Docker support for easier setup 
 - **v2.0** – File system restructured for better organization
+
+## Credits & Attribution
+
+See full details of third-party resources and team contributions here:  
+[ATTRIBUTION.md](./ATTRIBUTION.md)
