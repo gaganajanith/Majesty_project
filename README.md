@@ -1,6 +1,6 @@
 # Majesty
 
-Majesty is an e-commerce clothing website built as part of the **Internet Services and Web Development (CSC113α)** course unit in the **1st semester** of the **Bachelor of Computer Science (BCS)** degree at the **University of Ruhuna, Sri Lanka**.  
+Majesty is an e-commerce clothing website built as part of the **Internet Services and Web Development (CSC113α)** course unit in the **1st semester** of the **Bachelor of Computer Science (BCS)** degree at the **Department of Computer Science, University of Ruhuna, Sri Lanka**.  
 
 This project demonstrates a full-stack web application with both frontend and backend components, designed to showcase web development and teamwork skills.
 
