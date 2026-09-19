@@ -16,12 +16,11 @@ body {
     animation: fadeIn 1.2s ease-in;
 }
 
-.page_layout 
-    {
-        display: flex;
-        flex: 1; 
-        min-height: calc(80vh - 60px); 
-    }
+.page_layout {
+    display: flex;
+    flex: 1;
+    min-height: calc(80vh - 60px);
+}
 
 /* Animations */
 @keyframes fadeIn {
@@ -61,7 +60,7 @@ body {
     top: 0;
     z-index: 1000;
     animation: fadeIn 1s ease-in-out;
-} 
+}
 
 /*search bar*/
 .search-container {
@@ -141,46 +140,84 @@ body {
 .nav-links li a:hover {
     color: #e2b714;
 }
-   
-   
-/*Side bar*/  
-   
-.cart_sidebar
-    {
-        position: sticky;
-        top: 50px;
-        background-color: #51543ee8;
-        width: 200px;
-        height: calc(80vh - 60px);
-        overflow-y: auto;
-    }
-        
-.cart_sidebar ul li 
-    {
-        list-style: none;
-        text-align: center;
-                
-    }
 
-.cart_sidebar ul li a
-    {
-        padding: 10px;
-        display: block;
-        text-decoration: none;
-        color: black;
-    }
 
-.cart_sidebar ul li a:hover
-    {
-        border-radius: 8px;
-        background-color: gold;
-    }
+/* Hero banner */
+.cart-hero {
+    position: relative;
+    width: 100%;
+    height: 220px;
+    background-image: url('/Majesty_project/assets/images/shop_image.jpeg');
+    background-size: cover;
+    background-position: center;
+}
 
-.cart_main
-    {
-        flex: 1;
-        padding: 30px;
-    }
+.cart-hero-overlay {
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.cart-hero-overlay h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #fff9c6;
+}
+
+.cart-hero-overlay p {
+    margin-top: 0.5rem;
+    font-size: 20px;
+    color: #fff9c6;
+}
+
+.cart-hero-overlay::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: #e2b714;
+    margin-top: 1rem;
+}
+
+
+/*Side bar*/
+
+.cart_sidebar {
+    position: sticky;
+    top: 50px;
+    background-color: #51543ee8;
+    width: 200px;
+    height: calc(80vh - 60px);
+    overflow-y: auto;
+}
+
+.cart_sidebar ul li {
+    list-style: none;
+    text-align: center;
+
+}
+
+.cart_sidebar ul li a {
+    padding: 10px;
+    display: block;
+    text-decoration: none;
+    color: black;
+}
+
+.cart_sidebar ul li a:hover {
+    border-radius: 8px;
+    background-color: gold;
+}
+
+.cart_main {
+    flex: 1;
+    padding: 30px;
+}
 
 
 /*Shop now button*/
@@ -202,54 +239,48 @@ body {
 }
 
 /*Checkout bitton*/
-.checkout_btn
-    {
-        border-radius: 8px;
-        background-color: gold;
-    }
+.checkout_btn {
+    border-radius: 8px;
+    background-color: gold;
+}
 
 .checkout_btn:hover {
     transform: translateY(-3px);
     box-shadow: 0 10px 20px rgba(226, 183, 20, 0.5);
 }
 
-table
-    {
-        border: none;
-        width: 100%;
-        margin-top: 20px;
-        border-radius: 8px;
-        overflow: hidden;
-        
-    }
+table {
+    border: none;
+    width: 100%;
+    margin-top: 20px;
+    border-radius: 8px;
+    overflow: hidden;
 
-table th
-    {
-        background-color: #e2b714;
-        padding: 14px;
-        text-align: center;
-        font-weight: 600;
-        border-radius: 1%;
-    }
+}
 
-table td
-    {
-        padding: 12px 15px;
-        border-bottom: 1px solid; 
-        color: #ccc;
-    }
+table th {
+    background-color: #e2b714;
+    padding: 14px;
+    text-align: center;
+    font-weight: 600;
+    border-radius: 1%;
+}
 
-table tr:last-child
-    {
-        background-color: rgba(226, 183, 20, 0.5);
-        font-size: 16px;
-    }
+table td {
+    padding: 12px 15px;
+    border-bottom: 1px solid;
+    color: #ccc;
+}
 
-table tr:last-child td
-    {
-        font-weight: bold;
-        border-top: 2px solid #ffcc00;
-    }
+table tr:last-child {
+    background-color: rgba(226, 183, 20, 0.5);
+    font-size: 16px;
+}
+
+table tr:last-child td {
+    font-weight: bold;
+    border-top: 2px solid #ffcc00;
+}
 
 
 
@@ -311,7 +342,7 @@ table tr:last-child td
         flex: 1 1 100%;
     }
 
-     .page_layout {
+    .page_layout {
         flex-direction: column;
     }
 
