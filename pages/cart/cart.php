@@ -41,7 +41,13 @@ session_start();
     <!--top banner-->
     <section class="cart-hero">
         <div class="cart-hero-overlay">
-            <h1>Cart</h1>
+            
+            <table>
+                <tr>
+                    <td><h1>Cart</h1></td>
+                    <td><img src="/Majesty_project/assets/images/cart1.png" alt="cart" height="75px" width="75px"></td>
+                </tr>
+            </table>
             <p><b>Good choices. Now make them yours.</b></p>
         </div>
     </section>
@@ -96,10 +102,11 @@ session_start();
                                 </div>
                             </td>
                             <td align="right">LKR <?= $total ?></td>
-                            <td align="center", class="delete-cell">
+                            <td align="center" , class="delete-cell">
                                 <form action="/Majesty_project/logic/remove_item.logic.php" method="POST">
                                     <input type="hidden" name="key" value="<?= $key ?>">
-                                    <button type="submit" class="delete-btn"><img src="/Majesty_project/assets/images/icon-delete.png" alt="delete"></button>
+                                    <button type="submit" class="delete-btn"><img
+                                            src="/Majesty_project/assets/images/icon-delete.png" alt="delete"></button>
                                 </form>
                             </td>
                         </tr>
@@ -164,7 +171,8 @@ session_start();
     <footer class="footer">
         <div class="footer-column">
             <!-- MAJESTY logo -->
-            <a href="/Majesty_project/pages/home/home.html"><img src="/Majesty_project/assets/images/majesty(1).png" alt="logo2" height="45" width="120"></a>
+            <a href="/Majesty_project/pages/home/home.html"><img src="/Majesty_project/assets/images/majesty(1).png"
+                    alt="logo2" height="45" width="120"></a>
 
             <!--slogun-->
             <p class="slogun">match your vibe, your grind, your identity.

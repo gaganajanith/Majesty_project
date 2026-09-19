@@ -1,13 +1,13 @@
 /* Reset & Base */
 * {
-
+    
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
 body {
-
+    
     display: flex;
     flex-direction: column;
     min-height: 80vh;
@@ -18,12 +18,14 @@ body {
     animation: fadeIn 1.2s ease-in;
 }
 
-
-.page_layout {
+body{
     background-image: url('/Majesty_project/assets/images/cart-back.png');
     width: 100%;
     background-size: cover;
     background-position: center;
+}
+
+.page_layout {
     backdrop-filter: blur(7px);
     display: flex;
     flex: 1;
@@ -85,7 +87,7 @@ body {
     border-radius: 15px;
     outline: none;
     background: transparent;
-    backdrop-filter: blur(3px);
+    backdrop-filter: blur(5px);
     width: 300px;
 }
 
@@ -195,7 +197,6 @@ body {
 /*Side bar*/
 
 .cart_sidebar {
-    backdrop-filter: blur(7px);
     position: sticky;
     top: 50px;
     width: 200px;
@@ -355,7 +356,7 @@ body {
 }
 
 .table-1 th {
-
+    
     padding: 14px;
     text-align: center;
     font-weight: 600;
@@ -368,7 +369,7 @@ body {
 }
 
 .table-1 tr:last-child {
-
+    
     font-size: 16px;
 }
 
@@ -381,7 +382,7 @@ h3 {
     color: #e2b714;
 }
 
-.checkout-table {
+.checkout-table{
     width: 100%;
 }
 
