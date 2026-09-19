@@ -70,7 +70,7 @@ session_start();
 
                     <?php
                     $grand = 0;
-                    foreach ($_SESSION['cart'] as $item):
+                    foreach ($_SESSION['cart'] as $key => $item):
                         $total = $item['price'] * $item['qty'];
                         $grand += $total;
                         ?>
@@ -78,36 +78,59 @@ session_start();
                         <tr>
                             <td><?= $item['name'] ?></td>
                             <td align="right">LKR <?= $item['price'] ?></td>
-                            <td align="center"><?= $item['qty'] ?></td>
+                            <td align="center">
+                                <div class="qty-stepper">
+                                    <form action="/Majesty_project/logic/update_qty.logic.php" method="POST">
+                                        <input type="hidden" name="key" value="<?= $key ?>">
+                                        <input type="hidden" name="action" value="decrease">
+                                        <button type="submit" class="qty-btn">−</button>
+                                    </form>
+
+                                    <span class="qty-value"><?= $item['qty'] ?></span>
+
+                                    <form action="/Majesty_project/logic/update_qty.logic.php" method="POST">
+                                        <input type="hidden" name="key" value="<?= $key ?>">
+                                        <input type="hidden" name="action" value="increase">
+                                        <button type="submit" class="qty-btn">+</button>
+                                    </form>
+                                </div>
+                            </td>
                             <td align="right">LKR <?= $total ?></td>
                         </tr>
 
                     <?php endforeach; ?>
 
                     <tr>
-                        <td colspan="3" align="right"><b><h3>Grand Total</h3></b></td>
-                        <td align="right"><b><h3>LKR <?= $grand ?></h3></b></td>
+                        <td colspan="3" align="right"><b>
+                                <h3>Grand Total</h3>
+                            </b></td>
+                        <td align="right"><b>
+                                <h3>LKR <?= $grand ?></h3>
+                            </b></td>
                     </tr>
 
 
                 </table>
 
                 <br><br>
-            <table class="checkout-table" , border=0>
-                <tr>
-                    <td colspan="3" align="center"></td>
-                    <td align="right">
-                        <ul>
-                            <li class="checkout_btn"><a href="/Majesty_project/pages/auth/login.html"><b><p>CHECK OUT</p></b></a></li>
-                        </ul>
-                    </td>
-                </tr>
+                <table class="checkout-table" , border=0>
+                    <tr>
+                        <td colspan="3" align="center"></td>
+                        <td align="right">
+                            <ul>
+                                <li class="checkout_btn"><a href="/Majesty_project/pages/auth/login.html"><b>
+                                            <p>CHECK OUT</p>
+                                        </b></a></li>
+                            </ul>
+                        </td>
+                    </tr>
 
-            </table></ul>
+                </table>
+                </ul>
 
             <?php endif; ?>
 
-            
+
 
 
         </div>
