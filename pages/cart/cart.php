@@ -14,9 +14,24 @@ session_start();
 
 <body>
 
-  <!--navigation bar-->
+ <!--navigation bar-->
     <header class="navbar">
         <a href="/Majesty_project/pages/home/home.html"><img src="/Majesty_project/assets/images/majesty(1).png" alt="logo" width="120" height="40"></a>
+        <nav class="nav_bar">
+            <!-- search bar -->
+                <div class="search-container">
+                    <input type="text" placeholder="Search...">
+                    <button><img src="/Majesty_project/assets/images/search_bar.png" alt="search" width="15px" height="15px"></button>
+                </div>
+            <ul class="nav-links">
+                
+                <!--nav links-->
+                <li><a href="/Majesty_project/pages/shop/mens/mens.html">MENS</a></li>
+                <li><a href="/Majesty_project/pages/shop/womens/womens.html">WOMENS</a></li>
+                <li><a href="/Majesty_project/pages/auth/sign_up.html">SIGNUP</a></li>
+                <li><a href="/Majesty_project/pages/cart/cart.php"><img src="/Majesty_project/assets/images/Addw.png" class="cart"></a></li>
+            </ul>
+        </nav>
     </header>
 
     <div class="page_layout">

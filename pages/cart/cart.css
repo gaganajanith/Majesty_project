@@ -48,20 +48,99 @@ body {
     }
 }
 
+
 /* Navigation bar */
-.navbar 
-    {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 0.5rem 0.5rem;
-        background-color: #121212;
-        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
-        position: sticky;
-        top: 0;
-        z-index: 1000;
-        animation: fadeIn 1s ease-in-out;
-    }   
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 0.5rem;
+    background-color: #121212;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    animation: fadeIn 1s ease-in-out;
+} 
+
+/*search bar*/
+.search-container {
+    display: flex;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.search-container input {
+    padding: 7px 10px;
+    font-size: 14px;
+    border: 1px solid #ffffff;
+    border-radius: 15px;
+    outline: none;
+    background: transparent;
+    backdrop-filter: blur(5px);
+    width: 300px;
+}
+
+.search-container input:focus:not(:placeholder-shown) {
+    color: #ffffff;
+}
+
+.search-container button {
+    padding: 6px 12px;
+    border: none;
+    cursor: pointer;
+    border-radius: 15px 15px 15px 15px;
+    background-color: #121212;
+}
+
+@media (max-width: 700px) {
+
+
+
+    .search-container {
+        position: static;
+        /* Remove absolute center */
+        transform: none;
+        margin: 0 auto;
+        /* Center normally */
+    }
+
+    .search-container input {
+        width: 200px;
+    }
+}
+
+/*nav links*/
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    font-size: 16px;
+    color: #ccc;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+
+
+.cart {
+    height: 25px;
+    width: 80px;
+    transition: filter 0.3 ease;
+}
+
+.cart:hover {
+    content: url(/Majesty_project/assets/images/add.png);
+}
+
+.nav-links li a:hover {
+    color: #e2b714;
+}
    
    
 /*Side bar*/  
