@@ -96,6 +96,12 @@ session_start();
                                 </div>
                             </td>
                             <td align="right">LKR <?= $total ?></td>
+                            <td align="center", class="delete-cell">
+                                <form action="/Majesty_project/logic/remove_item.logic.php" method="POST">
+                                    <input type="hidden" name="key" value="<?= $key ?>">
+                                    <button type="submit" class="delete-btn"><img src="/Majesty_project/assets/images/icon-delete.png" alt="delete"></button>
+                                </form>
+                            </td>
                         </tr>
 
                     <?php endforeach; ?>
