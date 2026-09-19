@@ -1,13 +1,13 @@
 /* Reset & Base */
 * {
-    
+
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
 body {
-    
+
     display: flex;
     flex-direction: column;
     min-height: 80vh;
@@ -18,15 +18,13 @@ body {
     animation: fadeIn 1.2s ease-in;
 }
 
-body{
+
+.page_layout {
     background-image: url('/Majesty_project/assets/images/cart-back.png');
     width: 100%;
     background-size: cover;
     background-position: center;
-}
-
-.page_layout {
-    backdrop-filter: blur(5px);
+    backdrop-filter: blur(7px);
     display: flex;
     flex: 1;
     min-height: calc(80vh - 60px);
@@ -87,7 +85,7 @@ body{
     border-radius: 15px;
     outline: none;
     background: transparent;
-    backdrop-filter: blur(5px);
+    backdrop-filter: blur(3px);
     width: 300px;
 }
 
@@ -197,6 +195,7 @@ body{
 /*Side bar*/
 
 .cart_sidebar {
+    backdrop-filter: blur(7px);
     position: sticky;
     top: 50px;
     width: 200px;
@@ -250,6 +249,13 @@ body{
 
 
 /*table1*/
+
+.item-name {
+    font-weight: 700;
+    color: #fff;
+    font-size: 18px;
+}
+
 .qty-stepper {
     display: inline-flex;
     align-items: center;
@@ -349,7 +355,7 @@ body{
 }
 
 .table-1 th {
-    
+
     padding: 14px;
     text-align: center;
     font-weight: 600;
@@ -362,7 +368,7 @@ body{
 }
 
 .table-1 tr:last-child {
-    
+
     font-size: 16px;
 }
 
@@ -375,7 +381,7 @@ h3 {
     color: #e2b714;
 }
 
-.checkout-table{
+.checkout-table {
     width: 100%;
 }
 
@@ -387,8 +393,6 @@ h3 {
 
 /*footer*/
 .footer {
-    width: 100%;
-    box-sizing: border-box;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -399,24 +403,24 @@ h3 {
 
 .footer-column {
     flex: 1 1 45%;
-    margin: 5px 0;
+    margin: 10px 0;
 }
 
 .footer-column img {
-    margin-top: 10px;
+    margin-top: 15px;
     margin-bottom: 5px;
-    margin-right: 5px;
+    margin-right: 10px;
 }
 
 .footer-column p {
-    font-size: 12px;
+    font-size: 13px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 
 .footer-column h3 {
     margin-bottom: 10px;
-    font-size: 13px;
+    font-size: 18px;
     color: #ffcc00;
 }
 
@@ -438,23 +442,8 @@ h3 {
     color: #fff;
 }
 
-@media (max-width: 680px) {
+@media (max-width: 600px) {
     .footer-column {
         flex: 1 1 100%;
-    }
-
-    .page_layout {
-        flex-direction: column;
-    }
-
-    .cart_sidebar {
-        position: relative;
-        width: 100%;
-        height: auto;
-        top: 0;
-    }
-
-    .cart_main {
-        padding: 20px;
     }
 }

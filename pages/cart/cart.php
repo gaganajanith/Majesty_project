@@ -41,7 +41,7 @@ session_start();
     <!--top banner-->
     <section class="cart-hero">
         <div class="cart-hero-overlay">
-            <h1>Your Cart</h1>
+            <h1>Cart</h1>
             <p><b>Good choices. Now make them yours.</b></p>
         </div>
     </section>
@@ -76,7 +76,7 @@ session_start();
                         ?>
 
                         <tr>
-                            <td><?= $item['name'] ?></td>
+                            <td class="item-name"><?= $item['name'] ?></td>
                             <td align="right">LKR <?= $item['price'] ?></td>
                             <td align="center">
                                 <div class="qty-stepper">
@@ -160,8 +160,12 @@ session_start();
 
     <!-- Footer -->
 
+    <!-- Footer -->
     <footer class="footer">
         <div class="footer-column">
+            <!-- MAJESTY logo -->
+            <a href="/Majesty_project/pages/home/home.html"><img src="/Majesty_project/assets/images/majesty(1).png" alt="logo2" height="45" width="120"></a>
+
             <!--slogun-->
             <p class="slogun">match your vibe, your grind, your identity.
                 <br><br>Wear your power.
@@ -175,14 +179,18 @@ session_start();
         </div>
 
         <div class="footer-column">
+            <h3>Quick Links</h3>
             <ul>
-                <li><a href="/Majesty_project/pages/general/contact.html">Contact</a></li>
+                <li><a href="/Majesty_project/pages/home/home.html">Home</a></li>
+                <li><a href="/Majesty_project/pages/general/contact.html">contact</a></li>
                 <li><a href="/Majesty_project/pages/general/refund_policy.html">Refund Policy</a></li>
+                <li><a href="/Majesty_project/pages/general/about.html">about us</a></li>
             </ul>
             <br>
             <pre>&copy; 2026 | Majesty | All Rights Reserved |</pre>
         </div>
     </footer>
+
 </body>
 
 </html>
