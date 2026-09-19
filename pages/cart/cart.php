@@ -48,15 +48,6 @@ session_start();
 
     <div class="page_layout">
 
-        <div class="cart_sidebar">
-            <ul>
-                <li><a href="/Majesty_project/pages/home/home.html#shop_now"> Add more items</a> </li>
-                <li><a href="/Majesty_project/logic/logout.logic.php">Logout </a> </li>
-                <li><a href="/Majesty_project/logic/reset_cart.logic.php">Reset Cart</a></li>
-                <li class="checkout_btn"><a href="/Majesty_project/pages/auth/login.html">CHECK OUT</a></li>
-            </ul>
-        </div>
-
         <div class="cart_main">
 
 
@@ -68,19 +59,13 @@ session_start();
                     <br><br><br><br><br>
                     <a href="/Majesty_project/pages/home/home.html#shop_now"><button class="shop-btn">Shop Now</button></a>
                 </center>
-            <?php
+                <?php
             else:
                 ?>
 
 
-                <table border="1" cellpadding="10">
+                <table cellpadding="10" class="table-1">
 
-                    <tr>
-                        <th>Item</th>
-                        <th>Price</th>
-                        <th>Qty</th>
-                        <th>Total</th>
-                    </tr>
 
                     <?php
                     $grand = 0;
@@ -99,14 +84,40 @@ session_start();
                     <?php endforeach; ?>
 
                     <tr>
-                        <td colspan="3" align="center"><b>Grand Total</b></td>
-                        <td align="right"><b>LKR <?= $grand ?></b></td>
+                        <td colspan="3" align="right"><b><h3>Grand Total</h3></b></td>
+                        <td align="right"><b><h3>LKR <?= $grand ?></h3></b></td>
                     </tr>
+
 
                 </table>
 
             <?php endif; ?>
 
+            <br><br>
+            <table class="checkout-table" , border=0,>
+                <tr>
+                    <td colspan="3" align="center"></td>
+                    <td align="right">
+                        <ul>
+                            <li class="checkout_btn"><a href="/Majesty_project/pages/auth/login.html"><b><p>CHECK OUT</p></b></a></li>
+                        </ul>
+                    </td>
+                </tr>
+
+            </table>
+
+
+        </div>
+
+
+        <div class="cart_sidebar">
+            <ul>
+                <br><br><br>
+                <li><a href="/Majesty_project/pages/home/home.html#shop_now"> <b>Add items</b></a> </li>
+                <li><a href="/Majesty_project/logic/logout.logic.php"><b>Logout</b> </a> </li>
+                <li><a href="/Majesty_project/logic/reset_cart.logic.php"><b>Reset Cart</b></a></li>
+
+            </ul>
         </div>
 
     </div>

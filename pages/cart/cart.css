@@ -1,11 +1,13 @@
 /* Reset & Base */
 * {
+    
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
 body {
+    
     display: flex;
     flex-direction: column;
     min-height: 80vh;
@@ -16,7 +18,15 @@ body {
     animation: fadeIn 1.2s ease-in;
 }
 
+body{
+    background-image: url('/Majesty_project/assets/images/cart-back.png');
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+}
+
 .page_layout {
+    backdrop-filter: blur(5px);
     display: flex;
     flex: 1;
     min-height: calc(80vh - 60px);
@@ -147,7 +157,6 @@ body {
     position: relative;
     width: 100%;
     height: 220px;
-    background-image: url('/Majesty_project/assets/images/shop_image.jpeg');
     background-size: cover;
     background-position: center;
 }
@@ -190,7 +199,6 @@ body {
 .cart_sidebar {
     position: sticky;
     top: 50px;
-    background-color: #51543ee8;
     width: 200px;
     height: calc(80vh - 60px);
     overflow-y: auto;
@@ -203,20 +211,22 @@ body {
 }
 
 .cart_sidebar ul li a {
+    size: 25px;
     padding: 10px;
     display: block;
     text-decoration: none;
-    color: black;
+    color: #fafafa;
 }
 
 .cart_sidebar ul li a:hover {
     border-radius: 8px;
-    background-color: gold;
+    background-color: rgba(255, 228, 73, 0.438);
 }
 
 .cart_main {
     flex: 1;
     padding: 30px;
+    backdrop-filter: blur(3px);
 }
 
 
@@ -238,18 +248,27 @@ body {
     box-shadow: 0 10px 20px rgba(226, 183, 20, 0.5);
 }
 
-/*Checkout bitton*/
+/*Checkout button*/
 .checkout_btn {
+    height: 30px;
+    width: 120px;
     border-radius: 8px;
     background-color: gold;
+    list-style: none;
+    text-align: center;
 }
 
 .checkout_btn:hover {
     transform: translateY(-3px);
-    box-shadow: 0 10px 20px rgba(226, 183, 20, 0.5);
+    box-shadow: 0 10px 20px rgba(224, 178, 9, 0.856);
 }
 
-table {
+.checkout_btn a {
+    text-decoration: none;
+    display: inline-block;
+}
+
+.table-1 {
     border: none;
     width: 100%;
     margin-top: 20px;
@@ -258,30 +277,42 @@ table {
 
 }
 
-table th {
-    background-color: #e2b714;
+.table-1 th {
+    
     padding: 14px;
     text-align: center;
     font-weight: 600;
     border-radius: 1%;
 }
 
-table td {
+.table-1 td {
     padding: 12px 15px;
     border-bottom: 1px solid;
     color: #ccc;
 }
 
-table tr:last-child {
-    background-color: rgba(226, 183, 20, 0.5);
+.table-1 tr:last-child {
+    
     font-size: 16px;
 }
 
-table tr:last-child td {
+.table-1 tr:last-child td {
     font-weight: bold;
     border-top: 2px solid #ffcc00;
 }
 
+h3 {
+    color: #e2b714;
+}
+
+.checkout-table{
+    width: 100%;
+}
+
+.checkout-table p {
+    color: #141414;
+    align-items: center;
+}
 
 
 /*footer*/
