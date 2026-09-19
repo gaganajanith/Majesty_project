@@ -55,6 +55,7 @@ session_start();
             if (empty($_SESSION['cart'])):
                 ?>
                 <center>
+                    <br><br><br>
                     <h1>Cart is empty !!!</h1>
                     <br><br><br><br><br>
                     <a href="/Majesty_project/pages/home/home.html#shop_now"><button class="shop-btn">Shop Now</button></a>
@@ -91,10 +92,8 @@ session_start();
 
                 </table>
 
-            <?php endif; ?>
-
-            <br><br>
-            <table class="checkout-table" , border=0,>
+                <br><br>
+            <table class="checkout-table" , border=0>
                 <tr>
                     <td colspan="3" align="center"></td>
                     <td align="right">
@@ -104,7 +103,11 @@ session_start();
                     </td>
                 </tr>
 
-            </table>
+            </table></ul>
+
+            <?php endif; ?>
+
+            
 
 
         </div>
