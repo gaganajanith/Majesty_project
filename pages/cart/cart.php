@@ -161,12 +161,6 @@ session_start();
 
     </div>
 
-
-
-    </div>
-
-    <!-- Footer -->
-
     <!-- Footer -->
     <footer class="footer">
         <div class="footer-column">
