@@ -139,7 +139,7 @@ session_start();
                     </tr>
 
                 </table>
-                </ul>
+                
 
             <?php endif; ?>
 
