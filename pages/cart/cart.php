@@ -102,7 +102,7 @@ session_start();
                                 </div>
                             </td>
                             <td align="right">LKR <?= $total ?></td>
-                            <td align="center" , class="delete-cell">
+                            <td align="center"  class="delete-cell">
                                 <form action="/Majesty_project/logic/remove_item.logic.php" method="POST">
                                     <input type="hidden" name="key" value="<?= $key ?>">
                                     <button type="submit" class="delete-btn"><img
