@@ -126,7 +126,7 @@ session_start();
                 </table>
 
                 <br><br>
-                <table class="checkout-table" , border=0>
+                <table class="checkout-table"  border=0>
                     <tr>
                         <td colspan="3" align="center"></td>
                         <td align="right">
